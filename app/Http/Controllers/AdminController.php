@@ -194,7 +194,6 @@ class AdminController extends Controller
 
         $client = Client::orderBy('id','desc')->first();
         $book = Book::where('company_name',$client->name);
-        $codep = Payment::orderBy('id','desc')->first();
       
         $pay = new \App\Payment;
         $pay->client_id = $client->id;
@@ -203,8 +202,10 @@ class AdminController extends Controller
         $pay->payment_total = 100000;
         $pay->img_transfer = "RRRRR";
         $pay->save();
+        $codep = Payment::where('client_id',$client->id)->first();
+        $code = $codep->pay_code;
 
-        Mail::send('admin.confirm',['receiver_name'=>$client->name, 'date'=>$client->created_at,'id'=>$client->id,'code'=>$codep->pay_code],function($m) use($client){
+        Mail::send('admin.confirm',['receiver_name'=>$client->name, 'date'=>$client->created_at,'id'=>$client->id,'code'=>$code],function($m) use($client){
             $m->from('akbar.sya19@gmail.com',"Admin TMS");
             $m->to($client->email,$client->company_name)->subject("Booking Confirmation");
         });
