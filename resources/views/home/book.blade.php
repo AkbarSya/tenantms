@@ -175,7 +175,7 @@
 						<h3 class="box-title">asdkl</h3>
 					</div>
 					<div class="box-body">
-					<form id="contact-form" class="contact" method="post" action="{{url('home/book')}}">
+					<form id="contact-form" class="contact" method="post" action="{{url('/book')}}">
 					{!! csrf_field() !!}
 					<input type="hidden" name="room_id" value="{{$detail->id}}">
 					<div class="form-group">
