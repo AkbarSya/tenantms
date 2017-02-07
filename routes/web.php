@@ -14,7 +14,7 @@
 Route::get('/', 'HomeController@index');
 Route::get('/home','HomeController@index');
 Route::get('book/{id}','HomeController@GetBook');
-Route::post('book','HomeController@PostBook');
+Route::post('/book','HomeController@PostBook');
 Route::get('payment/{id}','HomeController@GetPay');
 Route::post('payment','HomeController@PostPay');
 

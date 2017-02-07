@@ -56,7 +56,7 @@ class HomeController extends Controller
         $book->date_expired = $r->date_expired;
         $book->save();
 
-        return redirect('');
+        return redirect('/');
     }
 
     public function GetPay($id)
