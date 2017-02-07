@@ -14,35 +14,35 @@
      @import url(http://fonts.googleapis.com/css?family=opensans:500);
    </style>  
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url('/bootstrap/css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- fullCalendar 2.2.5-->
-    <link rel="stylesheet" href="../../plugins/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="{{url('/plugins/fullcalendar/fullcalendar.min.css')}}">
     <link rel="stylesheet" href="../../plugins/fullcalendar/fullcalendar.print.css" media="print">
     <!-- Theme style -->
-    <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{url('/dist/css/AdminLTE.min.css')}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="{{url('/dist/css/skins/_all-skins.min.css')}}">
     <!-- iCheck -->
-    <link rel="stylesheet" href="../../plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="{{url('plugins/iCheck/flat/blue.css')}}">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="{{url('plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
     <!-- daterange picker -->
-    <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="{{url('/plugins/daterangepicker/daterangepicker-bs3.css')}}">
     <!-- iCheck for checkboxes and radio inputs -->
-    <link rel="stylesheet" href="../../plugins/iCheck/all.css">
+    <link rel="stylesheet" href="{{url('/plugins/iCheck/all.css')}}">
     <!-- Bootstrap Color Picker -->
-    <link rel="stylesheet" href="../../plugins/colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="{{url('/plugins/colorpicker/bootstrap-colorpicker.min.css')}}">
     <!-- Select2 -->
-    <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
+    <link rel="stylesheet" href="{{url('/plugins/select2/select2.min.css')}}">
     <!-- Bootstrap time Picker -->
-    <link rel="stylesheet" href="../../plugins/timepicker/bootstrap-timepicker.min.css">
+    <link rel="stylesheet" href="{{url('/plugins/timepicker/bootstrap-timepicker.min.css')}}">
     <!-- POP UP -->
-     <link rel="stylesheet" href="/css/popup.css">
+     <link rel="stylesheet" href="{{url('/css/popup.css')}}">
     
 
 
@@ -147,11 +147,11 @@
                 <i class="fa fa-home"></i> <span>Home</span> 
               </a>
             </li>
-            <li class="treeview">
+            <!-- <li class="treeview">
               <a href="{{url('admin/mail')}}">
                 <i class="fa  fa-envelope-o"></i><span>Email</span>
               </a>              
-            </li>
+            </li> -->
             <li>
               <a href="{{url('admin/status')}}">
                 <i class="fa  fa-inbox"></i> <span>Places Status</span>
@@ -173,21 +173,21 @@
     </div><!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->
-    <script src="../../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="{{url('/plugins/jQuery/jQuery-2.1.4.min.js')}}"></script>
     <!-- Bootstrap 3.3.5 -->
-    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{url('/bootstrap/js/bootstrap.min.js')}}"></script>
     <!-- Slimscroll -->
-    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="{{url('/plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
     <!-- FastClick -->
-    <script src="../../plugins/fastclick/fastclick.min.js"></script>
+    <script src="{{url('/plugins/fastclick/fastclick.min.js')}}"></script>
     <!-- AdminLTE App -->
-    <script src="../../dist/js/app.min.js"></script>
+    <script src="{{url('/dist/js/app.min.js')}}"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="../../dist/js/demo.js"></script>
+    <script src="{{url('/dist/js/demo.js')}}"></script>
     <!-- iCheck -->
-    <script src="../../plugins/iCheck/icheck.min.js"></script>
+    <script src="{{url('/plugins/iCheck/icheck.min.js')}}"></script>
     <!-- Bootstrap WYSIHTML5 -->
-    <script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    <script src="{{url('/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}"></script>
     <script>
       $(function () {
         //Enable iCheck plugin for checkboxes
