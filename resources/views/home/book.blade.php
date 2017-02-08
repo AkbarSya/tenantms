@@ -92,6 +92,9 @@
 		<div class="text-center">
 			<div class="col-sm-8 col-sm-offset-2">
 				<h2 class="title-one">About Room</h2>
+					<div class="alert alert-success alert-dissmissable">
+						<button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+					</div>
 				<p>With This Room, You can make your own room!!!</p>
 			</div>
 		</div>

@@ -1,6 +1,6 @@
 Hello, {{$receiver_name}}
 <p>
-	We had accepting your book in http://localhost:8000 Tenant Management System</a> at {{$date}}
+	We had accepting your book in Tenant Management System</a> at {{$date}}
 </p>
 <p>
 	For the next step, we provide a payment form.
