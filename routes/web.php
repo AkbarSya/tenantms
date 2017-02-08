@@ -56,8 +56,10 @@ Route::group(['middleware'=>'role:admin'],function(){
 Route::group(['middleware'=>'role:accounting'],function(){
 	Route::get('account/home','PaymentController@index');
 	Route::get('account/table','PaymentController@GetTable');
-	Route::get('account/invoice','PaymentController@GetPayment');
+	Route::get('account/status','PaymentController@GetPayment');
 	Route::get('account/detail/{id}','PaymentController@GetDetail');
+	Route::get('account/print/{id}','PaymentController@GetPrint');
+	Route::post('account/payment','PaymentController@PostPay');
 });
 
 Route::group(['middleware'=>'role:stockop'],function(){

@@ -20,6 +20,7 @@ class CreatePaymentsTable extends Migration
             $table->string('payment_total');
             $table->string('img_transfer');
             $table->integer('order_id')->unsigned();
+            $table->string('status');
             $table->timestamps();
             $table->foreign('order_id')->references('id')->on('orders')->onDelete('cascade')->onUpdate('cascade');
         });

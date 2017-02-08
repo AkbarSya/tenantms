@@ -161,14 +161,9 @@
                   <a href="{{url('account/table')}}">
                     <i class="fa fa-table"></i><span>Tables Payment</span>
                   </a>
-                </li>
-                <li>
-                  <a href="{{url('account/invoice')}}">
-                    <i class="fa  fa-credit-card"></i> <span>Payment Proccess</span>
-                  </a>
-                </li>            
+                </li>                
                 <li class="treeview">
-                  <a href="{{url('account/input')}}">
+                  <a href="{{url('account/status')}}">
                     <i class="fa fa-info-circle"></i> <span>Info Payment</span>
                   </a>
                 </li>                

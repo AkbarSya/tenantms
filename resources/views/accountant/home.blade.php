@@ -31,31 +31,16 @@
                   </span>
                 </li>
                 <!-- /.timeline-label -->              
-              
-                @foreach($account as $key)
+                              
+                @foreach($pay as $key)
+                <?php
+                ?>
                 <li>
                   <i class="fa fa-envelope bg-blue"></i>
                   <div class="timeline-item">
                     <span class="time"><i class="fa fa-clock-o"></i> {{Carbon::createFromFormat('Y-m-d H:i:s',$key->created_at)->format('H:i ( d M y )')}}</span>
-                    <h3 class="timeline-header"><a href="#">Admin</a> send an email to {{$key->receiver_name}} <small> < {{$key->receiver}} ></small></h3>
-                    <div class="timeline-body">
-                     {{$key->subject}}                      
-                    </div>
-                    <div class="timeline-footer">
-                      <a href="read-mail/{{$key->id}}" class="btn btn-primary btn-xs">Read more</a>
-                    </div>
-                  </div>
-                </li>
-                @endforeach                               
-                @foreach($account as $key)
-                <li>
-                  <i class="fa fa-envelope bg-blue"></i>
-                  <div class="timeline-item">
-                    <span class="time"><i class="fa fa-clock-o"></i> {{Carbon::createFromFormat('Y-m-d H:i:s',$key->created_at)->format('H:i ( d M y )')}}</span>
-                    <h3 class="timeline-header"><a href="#">Admin</a> Order to {{$key->company_id}} <small> Date Expired at< {{$key->expired_date}} ></small></h3>
-                    <div class="timeline-body">
-                     {{$key->subject}}                      
-                    </div>
+                    <h3 class="timeline-header"><a href="#">Admin</a> Confirm Payment to {{$key->company_id}} <small> </small></h3>
+                    
                     <div class="timeline-footer">
                       <a href="detail/{{$key->id}}" class="btn btn-primary btn-xs">Read more</a>
                     </div>

@@ -201,6 +201,7 @@ class AdminController extends Controller
         $pay->order_id = $s->id;
         $pay->payment_total = 100000;
         $pay->img_transfer = "RRRRR";
+        $pay->status = "Not Applied";
         $pay->save();
         $codep = Payment::where('client_id',$client->id)->first();
         $code = $codep->pay_code;

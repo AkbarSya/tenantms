@@ -1,22 +1,29 @@
- 	@extends('layouts.skelaccount')
-  	@section('content')
- 		<!-- Content Wrapper. Contains page content -->
-      <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-          <h1>
-            Invoice
-            <small>#000{{$status->id}}</small>
-          </h1>
-          <ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li><a href="#">Examples</a></li>
-            <li class="active">Invoice</li>
-          </ol>
-        </section>
+    <!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>TenantMS | Invoice</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <!-- Bootstrap 3.3.5 -->
+    <link rel="stylesheet" href="{{url('/bootstrap/css/bootstrap.min.css')}}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <!-- Theme style -->
+    <link rel="stylesheet" href="{{url('/dist/css/AdminLTE.min.css')}}">
 
-        <!-- Main content -->
-        <section class="invoice">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body onload="window.print();">
+      <section class="invoice">
           <!-- title row -->
           <div class="row">
             <div class="col-xs-12">
@@ -111,19 +118,9 @@
             </div><!-- /.col -->            
           </div><!-- /.row -->
 
-          <!-- this row will not appear when printing -->
-          <div class="row no-print">
-            <div class="col-xs-12">
-              <a href="{{url('account/print/'.$order->id)}}" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
-              <form action="{{url('/account/payment')}}" method="post">
-              {!! csrf_field() !!}
-              <input type="hidden" value="{{$status->id}}" name="id">
-              <button type="submit" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>              
-              </form>
-            </div>
-          </div>
-        </section><!-- /.content -->
-        <div class="clearfix"></div>
-      </div><!-- /.content-wrapper -->
+          <!-- this row will not appear when printing -->          
+        </section><!-- /.content -->         
+        </body>
 
-      @endsection
+        <!-- AdminLTE App -->
+    <script src="{{url('/dist/js/app.min.js')}}"></script>

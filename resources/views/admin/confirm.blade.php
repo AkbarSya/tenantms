@@ -9,7 +9,7 @@ Hello, {{$receiver_name}}
 	Please click the link below :
 </p>
 <p>
-	http://localhost:8000/payment/{{$id}}
+	http://35.161.216.115/tenantms/payment/{{$id}}
 </p>
 <p>Use number to fill the code payment : {{$code}}</p>
 <p><p></p>

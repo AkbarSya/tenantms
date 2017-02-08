@@ -14,8 +14,9 @@ class PaymentController extends Controller
 {
     public function index()
     {
-    	$account = Payment::orderBy('id','desc')->paginate(100);
-    	return view('accountant.home')->with('account' , $account);
+        $no = 1;
+        $pay = Payment::orderBy('id','desc')->get();        
+        return view('accountant.home', ['no'=>$no,'pay'=>$pay]);
     }
 
     public function GetTable()
@@ -27,7 +28,9 @@ class PaymentController extends Controller
 
     public function GetPayment()
     {
-    	return view('accountant.invoice');
+        $no = 1;
+        $pay = Payment::orderBy('id','desc')->get();
+    	return view('accountant.status')->with('no',$no)->with('pay',$pay);
     }
 
     public function GetDetail($id)
@@ -36,6 +39,27 @@ class PaymentController extends Controller
         $order = Order::where('id', $id)->first();
         $package = Package::find($order->package_id);
         $client = Client::find($order->company_id);
-        return view('accountant.detail', ['no'=>$no , 'status'=>$order,'package'=>$package, 'client'=>$client]);
+        $pay = Payment::where('client_id',$client->id)->get();
+        return view('accountant.detail', ['no'=>$no , 'status'=>$order,'package'=>$package, 'client'=>$client,'pay'=>$pay,'order'=>$order]);
     }
+
+    public function GetPrint($id)
+    {
+        $no = 1;
+        $order = Order::where('id', $id)->first();
+        $package = Package::find($order->package_id);
+        $client = Client::find($order->company_id);
+        $pay = Payment::where('client_id',$client->id)->get();
+        return view('accountant.print', ['no'=>$no , 'status'=>$order,'package'=>$package, 'client'=>$client,'pay'=>$pay,'order'=>$order]);   
+    }
+
+    public function PostPay(Request $pay)
+    {
+        $pay = Payment::find($pay->input('id'));
+        $pay->status = "Applied";
+        $pay->save();
+        return redirect('account/status');
+    }
+
+
 }
