@@ -118,6 +118,9 @@
               <form action="{{url('/account/payment')}}" method="post">
               {!! csrf_field() !!}
               <input type="hidden" value="{{$status->id}}" name="id">
+              <input type="hidden" value="{{$client->name}}" name="name">
+              <input type="hidden" value="{{$client->email}}" name="email">
+              <input type="hidden" value="{{$status->date_order}}" name="date">        
               <button type="submit" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>              
               </form>
             </div>

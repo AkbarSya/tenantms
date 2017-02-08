@@ -50,7 +50,7 @@
           <section class="content-header">
             <h1>
               Payment Proccess
-              <small>PT Example 2.0</small>
+              <small>{{$client->name}}</small>
             </h1>            
           </section>
 

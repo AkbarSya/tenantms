@@ -236,7 +236,7 @@
 						<div class="row item active">
 							<div class="col-sm-6 col-md-3">
 								<div class="single-member">
-									<img src="{!!url('/file/photo/LUXURY_201701230712325885ace00f3ae.png')!!}" alt="team member" />
+									<img src="{!!url('/file/photo/'.$image->filename)!!}" alt="team member" />
 									<h4>{{$room->room}}</h4>
 									<h5>Price : Rp.{{ number_format($room->price, 0,",",",")}}/Year</h5>
 									<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod</p>

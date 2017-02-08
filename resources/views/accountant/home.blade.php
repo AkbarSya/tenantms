@@ -34,12 +34,13 @@
                               
                 @foreach($pay as $key)
                 <?php
+                $client = \App\Client::where('id',$key->client_id)->first();
                 ?>
                 <li>
                   <i class="fa fa-envelope bg-blue"></i>
                   <div class="timeline-item">
                     <span class="time"><i class="fa fa-clock-o"></i> {{Carbon::createFromFormat('Y-m-d H:i:s',$key->created_at)->format('H:i ( d M y )')}}</span>
-                    <h3 class="timeline-header"><a href="#">Admin</a> Confirm Payment to {{$key->company_id}} <small> </small></h3>
+                    <h3 class="timeline-header"><a href="#">Admin</a> Confirm Booking to  <small> {{$client->name}} </small></h3>
                     
                     <div class="timeline-footer">
                       <a href="detail/{{$key->id}}" class="btn btn-primary btn-xs">Read more</a>

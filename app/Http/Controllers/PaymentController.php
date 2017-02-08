@@ -9,6 +9,7 @@ use App\Payment;
 use App\Order;
 use App\Package;
 use App\Client;
+use Mail;
 
 class PaymentController extends Controller
 {
@@ -55,9 +56,21 @@ class PaymentController extends Controller
 
     public function PostPay(Request $pay)
     {
+
         $pay = Payment::find($pay->input('id'));
         $pay->status = "Applied";
         $pay->save();
+
+        $name = $pay->name;
+        $date = $pay->date;
+        $email = $pay->email;
+        $detail = Client::where('id',$pay->client_id)->first();
+
+
+        Mail::send('accountant.confirm',['receiver_name'=>$name, 'date'=>$date,'email'=>$email],function($m) use($detail){
+            $m->from('akbar.sya19@gmail.com',"Admin TMS");
+            $m->to($detail->email,$detail->name)->subject("Payment Confirmation");
+        });
         return redirect('account/status');
     }
 
