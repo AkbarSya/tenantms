@@ -101,7 +101,7 @@ svg {
   <p>Access Denied!</p>
   <div class="buttons-con">
     <div class="action-link-wrap">      
-      <a href="/logout" class="link-button">Go to Login Page</a>
+      <a href="{{url('/logout')}}" class="link-button">Go to Login Page</a>
     </div>
   </div>
 </div>

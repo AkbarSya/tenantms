@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- fullCalendar 2.2.5-->
     <link rel="stylesheet" href="{{url('/plugins/fullcalendar/fullcalendar.min.css')}}">
-    <link rel="stylesheet" href="../../plugins/fullcalendar/fullcalendar.print.css" media="print">
+    <link rel="stylesheet" href="{{url('/plugins/fullcalendar/fullcalendar.print.css')}}" media="print">
     <!-- Theme style -->
     <link rel="stylesheet" href="{{url('/dist/css/AdminLTE.min.css')}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
@@ -433,18 +433,18 @@
       });
     </script>
     <!-- InputMask -->
-    <script src="../../plugins/input-mask/jquery.inputmask.js"></script>
-    <script src="../../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-    <script src="../../plugins/input-mask/jquery.inputmask.extensions.js"></script>
+    <script src="{{url('/plugins/input-mask/jquery.inputmask.js')}}"></script>
+    <script src="{{url('/plugins/input-mask/jquery.inputmask.date.extensions.js')}}"></script>
+    <script src="{{url('/plugins/input-mask/jquery.inputmask.extensions.js')}}"></script>
     <!-- date-range-picker -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
     <!-- Select2 -->
-    <script src="../../plugins/select2/select2.full.min.js"></script>
-    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="{{url('/plugins/select2/select2.full.min.js')}}"></script>
+    <script src="{{url('/plugins/daterangepicker/daterangepicker.js')}}"></script>
     <!-- bootstrap color picker -->
-    <script src="../../plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script src="{{url('/plugins/colorpicker/bootstrap-colorpicker.min.js')}}"></script>
     <!-- bootstrap time picker -->
-    <script src="../../plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="{{url('/plugins/timepicker/bootstrap-timepicker.min.js')}}"></script>
   </body>
 </html>
 

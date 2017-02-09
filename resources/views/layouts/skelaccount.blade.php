@@ -131,7 +131,7 @@
           <!-- Sidebar user panel -->
           <div class="user-panel">
             <div class="pull-left image">
-              <img src="../../dist/img/avatar5.png" class="img-circle" alt="User Image">
+              <img src="{{url('dist/img/avatar5.png')}}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
               <p>{{Auth::user()->name}}</p>
@@ -186,21 +186,21 @@
     </div><!-- ./wrapper -->
 
     <!-- jQuery 2.1.4 -->
-    <script src="../../plugins/jQuery/jQuery-2.1.4.min.js"></script>
+    <script src="{{url('/plugins/jQuery/jQuery-2.1.4.min.js')}}"></script>
     <!-- Bootstrap 3.3.5 -->
-    <script src="../../bootstrap/js/bootstrap.min.js"></script>
+    <script src="{{url('/bootstrap/js/bootstrap.min.js')}}"></script>
     <!-- Slimscroll -->
-    <script src="../../plugins/slimScroll/jquery.slimscroll.min.js"></script>
+    <script src="{{url('/plugins/slimScroll/jquery.slimscroll.min.js')}}"></script>
     <!-- FastClick -->
-    <script src="../../plugins/fastclick/fastclick.min.js"></script>
+    <script src="{{url('/plugins/fastclick/fastclick.min.js')}}"></script>
     <!-- AdminLTE App -->
-    <script src="../../dist/js/app.min.js"></script>
+    <script src="{{url('/dist/js/app.min.js')}}"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="../../dist/js/demo.js"></script>
+    <script src="{{url('/dist/js/demo.js')}}"></script>
     <!-- iCheck -->
-    <script src="../../plugins/iCheck/icheck.min.js"></script>
+    <script src="{{url('/plugins/iCheck/icheck.min.js')}}"></script>
     <!-- Bootstrap WYSIHTML5 -->
-    <script src="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+    <script src="{{url('/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}"></script>
     <script>
       $(function () {
         //Enable iCheck plugin for checkboxes
