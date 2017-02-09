@@ -115,6 +115,7 @@
           <div class="row no-print">
             <div class="col-xs-12">
               <a href="{{url('account/print/'.$order->id)}}" target="_blank" class="btn btn-default"><i class="fa fa-print"></i> Print</a>
+              @if($pay->status == "Not Applied")
               <form action="{{url('/account/payment')}}" method="post">
               {!! csrf_field() !!}
               <input type="hidden" value="{{$status->id}}" name="id">
@@ -123,6 +124,7 @@
               <input type="hidden" value="{{$status->date_order}}" name="date">        
               <button type="submit" class="btn btn-success pull-right"><i class="fa fa-credit-card"></i> Submit Payment</button>              
               </form>
+              @endif
             </div>
           </div>
         </section><!-- /.content -->

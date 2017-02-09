@@ -36,6 +36,7 @@
                 <?php
                 $client = \App\Client::where('id',$key->client_id)->first();
                 ?>
+                @if($key->status == "Not Applied")
                 <li>
                   <i class="fa fa-envelope bg-blue"></i>
                   <div class="timeline-item">
@@ -47,6 +48,7 @@
                     </div>
                   </div>
                 </li>
+                @endif
                 @endforeach            
                 <li>
                   <i class="fa fa-clock-o bg-gray"></i>
