@@ -206,7 +206,7 @@
 					</div>
 					<div class="form-group">
 						<label>Estimate Time</label>
-						<input type="text" class="form-control mail-field" name="date_expired" placeholder="Years"required="required" data-mask>
+						
 					</div>
 					</div>
 					<div class="form-group">
