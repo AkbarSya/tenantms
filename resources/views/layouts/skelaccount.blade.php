@@ -14,35 +14,35 @@
      @import url(http://fonts.googleapis.com/css?family=opensans:500);
    </style>  
     <!-- Bootstrap 3.3.5 -->
-    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{url('/bootstrap/css/bootstrap.min.css')}}">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <!-- Ionicons -->
     <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
     <!-- fullCalendar 2.2.5-->
-    <link rel="stylesheet" href="../../plugins/fullcalendar/fullcalendar.min.css">
-    <link rel="stylesheet" href="../../plugins/fullcalendar/fullcalendar.print.css" media="print">
+    <link rel="stylesheet" href="{{url('/plugins/fullcalendar/fullcalendar.min.css')}}">
+    <link rel="stylesheet" href="{{url('/plugins/fullcalendar/fullcalendar.print.css')}}" media="print">
     <!-- Theme style -->
-    <link rel="stylesheet" href="../../dist/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="{{url('/dist/css/AdminLTE.min.css')}}">
     <!-- AdminLTE Skins. Choose a skin from the css/skins
          folder instead of downloading all of them to reduce the load. -->
-    <link rel="stylesheet" href="../../dist/css/skins/_all-skins.min.css">
+    <link rel="stylesheet" href="{{url('/dist/css/skins/_all-skins.min.css')}}">
     <!-- iCheck -->
-    <link rel="stylesheet" href="../../plugins/iCheck/flat/blue.css">
+    <link rel="stylesheet" href="{{url('/plugins/iCheck/flat/blue.css')}}">
     <!-- bootstrap wysihtml5 - text editor -->
-    <link rel="stylesheet" href="../../plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+    <link rel="stylesheet" href="{{url('/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css')}}">
     <!-- daterange picker -->
-    <link rel="stylesheet" href="../../plugins/daterangepicker/daterangepicker-bs3.css">
+    <link rel="stylesheet" href="{{url('/plugins/daterangepicker/daterangepicker-bs3.css')}}">
     <!-- iCheck for checkboxes and radio inputs -->
-    <link rel="stylesheet" href="../../plugins/iCheck/all.css">
+    <link rel="stylesheet" href="{{url('/plugins/iCheck/all.css')}}">
     <!-- Bootstrap Color Picker -->
-    <link rel="stylesheet" href="../../plugins/colorpicker/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="{{url('/plugins/colorpicker/bootstrap-colorpicker.min.css')}}">
     <!-- Select2 -->
-    <link rel="stylesheet" href="../../plugins/select2/select2.min.css">
+    <link rel="stylesheet" href="{{url('/plugins/select2/select2.min.css')}}">
     <!-- Bootstrap time Picker -->
-    <link rel="stylesheet" href="../../plugins/timepicker/bootstrap-timepicker.min.css">
+    <link rel="stylesheet" href="{{url('/plugins/timepicker/bootstrap-timepicker.min.css')}}">
     <!-- POP UP -->
-     <link rel="stylesheet" href="/css/popup.css">
+     <link rel="stylesheet" href="{{url('/css/popup.css')}}">
     
 
 
@@ -556,18 +556,18 @@
       });
     </script>
     <!-- InputMask -->
-    <script src="../../plugins/input-mask/jquery.inputmask.js"></script>
-    <script src="../../plugins/input-mask/jquery.inputmask.date.extensions.js"></script>
-    <script src="../../plugins/input-mask/jquery.inputmask.extensions.js"></script>
+    <script src="{{url('/plugins/input-mask/jquery.inputmask.js')}}"></script>
+    <script src="{{url('/plugins/input-mask/jquery.inputmask.date.extensions.js')}}"></script>
+    <script src="{{url('/plugins/input-mask/jquery.inputmask.extensions.js')}}"></script>
     <!-- date-range-picker -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.2/moment.min.js"></script>
     <!-- Select2 -->
-    <script src="../../plugins/select2/select2.full.min.js"></script>
-    <script src="../../plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="{{url('/plugins/select2/select2.full.min.js')}}"></script>
+    <script src="{{url('/plugins/daterangepicker/daterangepicker.js')}}"></script>
     <!-- bootstrap color picker -->
-    <script src="../../plugins/colorpicker/bootstrap-colorpicker.min.js"></script>
+    <script src="{{url('/plugins/colorpicker/bootstrap-colorpicker.min.js')}}"></script>
     <!-- bootstrap time picker -->
-    <script src="../../plugins/timepicker/bootstrap-timepicker.min.js"></script>
+    <script src="{{url('/plugins/timepicker/bootstrap-timepicker.min.js')}}"></script>
   </body>
 </html>
 
