@@ -221,7 +221,7 @@ class AdminController extends Controller
 
         Mail::send('admin.cancel',['receiver_name'=>$data->company_name,
             'date'=>$data->created_at],function($m) use($data){
-            $m->from('akbar.syabani@gmail.com',"Admin TMS");
+            $m->from('akbar.sya19@gmail.com',"Admin TMS");
             $m->to($data->email,$data->company_name)->subject("Booking Cancellation");
         });
 
