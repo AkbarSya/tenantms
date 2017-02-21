@@ -14,18 +14,18 @@ Hello, {{$receiver_name}}
                       <div class="table-responsive">
                         <table class="table">
                         <?php
-                        $total = $order->price + $package->price;
+                        $total = $order + $package;
                         $prnt = $total/10;
                         $max = $prnt + $total
                         
                         ?>                          
                           <tr>
                             <th style="width:50%">Room Price</th>
-                            <td>Rp {{number_format($order->price,0,",",",")}}</td>
+                            <td>Rp {{number_format($order,0,",",",")}}</td>
                           </tr>
                           <tr>
                             <th>Package Price</th>
-                            <td>Rp {{number_format($package->price,0,",",",")}}</td>
+                            <td>Rp {{number_format($package,0,",",",")}}</td>
                           </tr>
                           <tr>
                             <th>Tax (10%)</th>

@@ -208,7 +208,7 @@ class AdminController extends Controller
         $codep = Payment::where('client_id',$client->id)->first();
         $code = $codep->pay_code;
 
-        Mail::send('admin.confirm',['receiver_name'=>$client->name, 'date'=>$client->created_at,'id'=>$client->id,'code'=>$code,'order'=>$order,'$package'=>$package],function($m) use($client){
+        Mail::send('admin.confirm',['receiver_name'=>$client->name, 'date'=>$client->created_at,'id'=>$client->id,'code'=>$code,'order'=>$order->price,'$package'=>$package->price],function($m) use($client){
             $m->from('akbar.syabani@gmail.com',"Admin TMS");
             $m->to($client->email,$client->company_name)->subject("Booking Confirmation");
         });
