@@ -5,11 +5,45 @@ Hello, {{$receiver_name}}
 <p>
 	For the next step, we provide a payment form.
 </p>
+
+<p> Here, what will you pay in :
+</p>
+<div class="form-group">
+                    <div class="col-xs-12">
+                      <p class="lead">Payment Detail</p>
+                      <div class="table-responsive">
+                        <table class="table">
+                        <?php
+                        $total = $order->price + $package->price;
+                        $prnt = $total/10;
+                        $max = $prnt + $total
+                        
+                        ?>                          
+                          <tr>
+                            <th style="width:50%">Room Price</th>
+                            <td>Rp {{number_format($order->price,0,",",",")}}</td>
+                          </tr>
+                          <tr>
+                            <th>Package Price</th>
+                            <td>Rp {{number_format($package->price,0,",",",")}}</td>
+                          </tr>
+                          <tr>
+                            <th>Tax (10%)</th>
+                            <td>Rp {{number_format($prnt,0,",",",")}}</td>
+                          </tr>
+                          <tr>
+                            <th>Total:</th>
+                            <td>Rp {{number_format($max,0,",",",")}}</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div><!-- /.col -->
+                    </div>                                                  
 <p>
 	Please click the link below :
 </p>
 <p>
-	http://35.161.216.115/tenantms/payment/{{$id}}
+	http://110.232.89.67//tenantms/payment/{{$id}}
 </p>
 <p>Use number to fill the code payment : {{$code}}</p>
 <p><p></p>
