@@ -194,8 +194,8 @@ class AdminController extends Controller
 
         $client = Client::orderBy('id','desc')->first();
         $book = Book::where('company_name',$client->name);
-        $order = Order::where('company_id',$client->id);
-        $package = Package::where('id',$order->package_id);
+        $order = Order::where('company_id',$client->id)->first();
+        $package = Package::where('id',$order->package_id)->first();
       
         $pay = new \App\Payment;
         $pay->client_id = $client->id;
