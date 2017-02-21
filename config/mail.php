@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => 'akbar.sya19@gmail.com',
+        'address' => 'akbar.syabani@gmail.com',
         'name' => 'Administration of Tenant MS',
     ],
 
