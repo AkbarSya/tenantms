@@ -60,7 +60,7 @@ class AdminController extends Controller
     	$email->save();
 
     	Mail::send('admin.reply',['fill'=>$requestData->fill,'receiver_name'=>$requestData->receiver_name],function($m) use($requestData){
-    		$m->from('akbar.sya19@gmail.com',$requestData->subject);
+    		$m->from('akbar.syabani@gmail.com',$requestData->subject);
     		$m->to($requestData->receiver,$requestData->receiver_name)->subject($requestData->subject);
     	});
 
@@ -207,7 +207,7 @@ class AdminController extends Controller
         $code = $codep->pay_code;
 
         Mail::send('admin.confirm',['receiver_name'=>$client->name, 'date'=>$client->created_at,'id'=>$client->id,'code'=>$code],function($m) use($client){
-            $m->from('akbar.sya19@gmail.com',"Admin TMS");
+            $m->from('akbar.syabani@gmail.com',"Admin TMS");
             $m->to($client->email,$client->company_name)->subject("Booking Confirmation");
         });
 
@@ -221,7 +221,7 @@ class AdminController extends Controller
 
         Mail::send('admin.cancel',['receiver_name'=>$data->company_name,
             'date'=>$data->created_at],function($m) use($data){
-            $m->from('akbar.sya19@gmail.com',"Admin TMS");
+            $m->from('akbar.syabani@gmail.com',"Admin TMS");
             $m->to($data->email,$data->company_name)->subject("Booking Cancellation");
         });
 

@@ -39,8 +39,7 @@ Route::get('index', 'HomeController@index');
 Route::group(['middleware'=>'role:admin'],function(){
 	Route::get('admin/home','AdminController@index');
 	Route::get('admin/mail','AdminController@GetMail');
-	Route::get('admin/status','AdminController@GetStatus');
-	Route::get('admin/input/{id}','AdminController@GetInput');
+	Route::get('admin/status','AdminController@GetStatus');	
 	Route::get('admin/input','AdminController@GetInput');
 	Route::post('admin/input','AdminController@PostInput');
 	Route::get('admin/inputs','AdminController@GetInputs');	
