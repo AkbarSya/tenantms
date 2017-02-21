@@ -43,7 +43,7 @@ Hello, {{$receiver_name}}
 	Please click the link below :
 </p>
 <p>
-	http://110.232.89.67//tenantms/payment/{{$id}}
+	http://110.232.89.67/ukom/tenantms/payment/{{$id}}
 </p>
 <p>Use number to fill the code payment : {{$code}}</p>
 <p><p></p>
