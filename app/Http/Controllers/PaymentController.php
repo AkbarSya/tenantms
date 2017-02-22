@@ -40,8 +40,8 @@ class PaymentController extends Controller
         $order = Order::where('id', $id)->first();
         $package = Package::find($id);
         $client = Client::find($order->company_id);
+        dd($order);
         $pay = Payment::where('client_id',$client->id)->first();
-        dd($pay);
         return view('accountant.detail', ['no'=>$no , 'status'=>$order,'package'=>$package, 'client'=>$client,'pay'=>$pay,'order'=>$order]);
     }
 
