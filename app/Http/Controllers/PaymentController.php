@@ -23,7 +23,7 @@ class PaymentController extends Controller
     public function GetTable()
     {	
     	$no = 1;
-    	$list = Client::orderBy('id','desc')->get();
+    	$list = Order::orderBy('id','desc')->paginate(10);
     	return view('accountant.table')->with('list',$list)->with('no',$no);
     }
 

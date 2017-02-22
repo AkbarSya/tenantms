@@ -43,6 +43,7 @@
 
                 <form action="{{url('admin/input')}}" method="post">
                 {!! csrf_field() !!}
+                <input type="text" name="order_id" value="{{$book->room_id}}">
                 <div class="box-body">                  
                   <div class="form-group">
                     <label>Company Name :</label>

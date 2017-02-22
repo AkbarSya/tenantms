@@ -138,6 +138,7 @@ class AdminController extends Controller
     {
         
         $client = new \App\Client;
+        $client->order_id = $clients->order_id;
         $client->name = $clients->name;
         $client->address = $clients->address;
         $client->email = $clients->email;
@@ -161,8 +162,7 @@ class AdminController extends Controller
     {   
         $client = Client::orderBy('id', 'desc')->first();
         // $client = Client::where('id', $id)->first();
-        // $roomId = $client->id;
-        $item = Item::where('');
+        // $roomId = $client->id;        
         $room = Order::orderBy('id','desc')->paginate(5);
         // $room = Order::where('id', $roomId)->first();
         return view('admin.inputs', ['client'=>$client , 'room'=>$room]);
