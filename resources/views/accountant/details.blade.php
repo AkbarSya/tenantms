@@ -6,7 +6,7 @@
         <section class="content-header">
           <h1>
             Invoice
-            <small>#100{{$status->id}}</small>
+            <small>#200{{$status->id}}</small>
           </h1>
           <ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -37,16 +37,7 @@
                 Phone: (021) 123-5432<br>
                 Email: akbar.syabani@gmail.com
               </address>
-            </div><!-- /.col -->
-            <div class="col-sm-4 invoice-col">
-              To
-              <address>
-                <strong>{{$client->name}}</strong><br>
-                {{$client->address}}<br>                
-                Phone: {{$client->phone}}<br>
-                Email: {{$client->email}}
-              </address>
-            </div><!-- /.col -->
+            </div><!-- /.col -->            
             <div class="col-sm-4 invoice-col">
               <b>Invoice #000{{$status->id}}</b><br>
               <br>
@@ -60,42 +51,23 @@
           <div class="row">
             <div class="col-xs-12 table-responsive">
             <?php
-            $room = $order->price;
-            $pack = $package->price;
-            $sum = $room + $pack;
-            $tax = $sum /10;
-            $total = $sum + $tax;
             ?>
               <table class="table table-striped">
                 <thead>
                   <tr>
                     <th>#</th>
-                    <th>Name</th>
-                    <th>Price</th>                    
+                    <th>Tenant Name</th>
+                    <th>Total</th>                    
                     
                   </tr>
                 </thead>
                 <tbody>
+                @foreach($client as $key)
                   <tr>
                     <td>{{$no++}}</td>
-                    <td>{{$order->room}}</td>
-                    <td>Rp. {{number_format($order->price,0,",",",")}}</td>                                        
-                  </tr>
-                  <tr>
-                    <td>{{$no++}}</td>
-                    <td>{{$package->name}}</td>
-                    <td>Rp. {{number_format($package->price,0,",",",")}}</td>                    
-                  </tr>
-                  <tr>
-                    <td>{{$no++}}</td>
-                    <td>Tax (10%)</td>
-                    <td>Rp. {{number_format($tax,0,",",",")}}</td>                    
-                  </tr>
-                  <tr>
-                    <td>{{$no++}}</td>
-                    <td>Total</td>
-                    <td>Rp. {{number_format($total,0,",",",")}}</td>                    
-                  </tr>
+                    <td>{{$key->name}}</td>
+                    <td>Rp. {{number_format($total,0,",",",")}}</td>
+                  </tr>                  
                 </tbody>
               </table>
             </div><!-- /.col -->
