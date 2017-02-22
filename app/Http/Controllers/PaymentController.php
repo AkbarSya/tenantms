@@ -40,18 +40,8 @@ class PaymentController extends Controller
         $order = Order::where('id', $id)->first();
         $package = Package::find($id);
         $client = Client::find($order->company_id);
-        $pay = Payment::where('client_id',$client->id)->get();
-        return view('accountant.detail', ['no'=>$no , 'status'=>$order,'package'=>$package, 'client'=>$client,'pay'=>$pay,'order'=>$order]);
-    }
-
-    public function GetDetails($id)
-    {
-        $no = 1;
-        $order = Order::where('id', $id)->first();
-        $package = Package::find($id);
-        $client = Client::where('order_id',$order->id)->get();
         $pay = Payment::where('client_id',$client->id)->first();
-        return view('accountant.details', ['no'=>$no , 'status'=>$order,'package'=>$package, 'client'=>$client,'pay'=>$pay,'order'=>$order]);
+        return view('accountant.detail', ['no'=>$no , 'status'=>$order,'package'=>$package, 'client'=>$client,'pay'=>$pay,'order'=>$order]);
     }
 
     public function GetPrint($id)

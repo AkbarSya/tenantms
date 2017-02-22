@@ -62,11 +62,10 @@
                   </tr>
                 </thead>
                 <tbody>
-                @foreach($client as $key)
                   <tr>
                     <td>{{$no++}}</td>
-                    <td>{{$key->name}}</td>
-                    <td>Rp. {{number_format($total,0,",",",")}}</td>
+                    <td>{{$order->room}}</td>
+                    <td>Rp. {{number_format($order->price,0,",",",")}}</td>                                        
                   </tr>                  
                 </tbody>
               </table>
