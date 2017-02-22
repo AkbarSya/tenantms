@@ -138,12 +138,12 @@
               <ul class="treeview-menu">
                 <li>
                   <a href="{{url('account/table')}}">
-                    <i class="fa fa-table"></i><span>Tables Payment</span>
+                    <i class="fa fa-table"></i><span>Rooms Payment</span>
                   </a>
                 </li>                
                 <li class="treeview">
                   <a href="{{url('account/status')}}">
-                    <i class="fa fa-info-circle"></i> <span>Info Payment</span>
+                    <i class="fa fa-info-circle"></i> <span>Tenant Payment</span>
                   </a>
                 </li>                
               </ul>

@@ -48,7 +48,7 @@
                       <span class="label label-warning">ON GOING</span>
                       @endif
                       </td>
-                      <td><a href="detail/{{$key->id}}">Go!</a></td>                      
+                      <td><a href="details/{{$key->id}}">Go!</a></td>                      
                     </tr>
                     @endforeach
                   </table>

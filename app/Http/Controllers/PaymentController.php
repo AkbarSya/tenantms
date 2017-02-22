@@ -23,7 +23,7 @@ class PaymentController extends Controller
     public function GetTable()
     {	
     	$no = 1;
-    	$list = Order::orderBy('id','desc')->paginate(10);
+    	$list = Client::orderBy('id','desc')->get();
     	return view('accountant.table')->with('list',$list)->with('no',$no);
     }
 
@@ -42,6 +42,16 @@ class PaymentController extends Controller
         $client = Client::find($order->company_id);
         $pay = Payment::where('client_id',$client->id)->first();
         return view('accountant.detail', ['no'=>$no , 'status'=>$order,'package'=>$package, 'client'=>$client,'pay'=>$pay,'order'=>$order]);
+    }
+
+    public function GetDetails($id)
+    {
+        $no = 1;
+        $order = Order::where('id', $id)->first();
+        $package = Package::find($id);
+        $client = Client::find($order->company_id);
+        $pay = Payment::where('client_id',$client->id)->first();
+        return view('accountant.details', ['no'=>$no , 'status'=>$order,'package'=>$package, 'client'=>$client,'pay'=>$pay,'order'=>$order]);
     }
 
     public function GetPrint($id)
