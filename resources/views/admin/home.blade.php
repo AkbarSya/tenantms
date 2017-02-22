@@ -30,6 +30,32 @@
                         ?>
                   </span>
                 </li>
+                @foreach($book as $key)
+                <li>
+                  <i class="fa fa-edit bg-green"></i>
+                  <div class="timeline-item">
+                    <span class="time"><i class="fa fa-clock-o"></i> {{Carbon::createFromFormat('Y-m-d H:i:s',$key->created_at)->format('H:i ( d M y )')}}</span>
+                    <h3 class="timeline-header"><a href="#">{{$key->company_name}}</a> Have Been Book<small></small></h3>
+                    <div class="timeline-body">
+                     <p>Leader Name :{{$key->leader_name}}</p>
+                     <p>Estimate Time :{{Carbon::createFromFormat('Y-m-d H:i:s',$key->created_at)->format('  d M Y ')}}</p>
+                    </div>
+                    <div class="timeline-footer">
+                      <div class="col-sm-1">
+                      <form action="{{url('admin/del/'.$key->id)}}" method="post">
+                        {!!csrf_field()!!}
+                       <button type="submit" class="btn btn-danger btn-sm">Delete
+                        
+                      </form>
+                      
+                    </div>
+                    <div class="timeline-footer">
+                      <a href="input/{{$key->id}}" class="btn btn-primary btn-sm">Confirm</a>
+                    </div>
+                    </div>
+                  </div>
+                </li>
+                @endforeach            
                 <!-- /.timeline-label -->              
                 <!-- timeline item -->
                 @foreach($email as $key)
@@ -58,32 +84,6 @@
                     </div>
                     <div class="timeline-footer">
                       <a href="detail/{{$key->id}}" class="btn btn-primary btn-sm">Read more</a>
-                    </div>
-                  </div>
-                </li>
-                @endforeach            
-                @foreach($book as $key)
-                <li>
-                  <i class="fa fa-edit bg-green"></i>
-                  <div class="timeline-item">
-                    <span class="time"><i class="fa fa-clock-o"></i> {{Carbon::createFromFormat('Y-m-d H:i:s',$key->created_at)->format('H:i ( d M y )')}}</span>
-                    <h3 class="timeline-header"><a href="#">{{$key->company_name}}</a> Have Been Book<small></small></h3>
-                    <div class="timeline-body">
-                     <p>Leader Name :{{$key->leader_name}}</p>
-                     <p>Estimate Time :{{Carbon::createFromFormat('Y-m-d H:i:s',$key->created_at)->format('  d M Y ')}}</p>
-                    </div>
-                    <div class="timeline-footer">
-                      <div class="col-sm-1">
-                      <form action="{{url('admin/del/'.$key->id)}}" method="post">
-                        {!!csrf_field()!!}
-                       <button type="submit" class="btn btn-danger btn-sm">Delete
-                        
-                      </form>
-                      
-                    </div>
-                    <div class="timeline-footer">
-                      <a href="input/{{$key->id}}" class="btn btn-primary btn-sm">Confirm</a>
-                    </div>
                     </div>
                   </div>
                 </li>

@@ -33,7 +33,7 @@
                     <tr>
                       <td>{{$no++}}</td>
                       <td>{{$key->name}}</td>
-                      <td>{{$key->price}}</td>                                          
+                      <td>Rp. {{number_format($key->price,0,",",",")}}</td>                                          
                     </tr>
                    </div>
                   @endforeach  

@@ -127,12 +127,7 @@
               <a href="{{url('warehouse/home')}}">
                 <i class="fa fa-home"></i> <span>Home</span> 
               </a>
-            </li>
-            <li class="treeview">
-              <a href="{{url('warehouse/mail')}}">
-                <i class="fa  fa-envelope-o"></i><span>Email</span>
-              </a>              
-            </li>
+            </li>                              
             <li class="treeview">
               <a href="#">
                 <i class="fa fa-inbox"></i> <span>Items</span> <i class="fa fa-angle-left pull-right"></i>

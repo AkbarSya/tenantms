@@ -135,12 +135,7 @@
               <a href="{{url('admin/status')}}">
                 <i class="fa  fa-inbox"></i> <span>Places Status</span>
               </a>
-            </li>
-            <li>
-              <a href="{{url('admin/input')}}">
-                <i class="fa  fa-inbox"></i> <span>Places Status</span>
-              </a>
-            </li>
+            </li>            
             <!-- 
             <li class="treeview">
               <a href="{{url('gps')}}">
