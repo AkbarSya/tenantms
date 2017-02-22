@@ -57,7 +57,7 @@ class PaymentController extends Controller
     public function PostPay(Request $pay)
     {
 
-        $pay = Payment::find($pay->input('id'));
+        $pay = Payment::where('order_id',$pay->input('id'))->first();
         $pay->status = "Applied";
         $pay->save();
 

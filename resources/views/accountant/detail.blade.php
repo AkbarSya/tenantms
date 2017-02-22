@@ -118,7 +118,7 @@
               @if($pay->status == "Not Applied")
               <form action="{{url('/account/payment')}}" method="post">
               {!! csrf_field() !!}
-              <input type="text" value="{{$status->id}}" name="id">
+              <input type="hidden" value="{{$status->id}}" name="id">
               <input type="hidden" value="{{$client->name}}" name="name">
               <input type="hidden" value="{{$client->email}}" name="email">
               <input type="hidden" value="{{$status->date_order}}" name="date">        
